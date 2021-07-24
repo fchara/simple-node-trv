@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node-trv .
+  - docker build -t simple-node-trv --build-arg NAME_VAR=${NAME_VAR} .
   - docker tag simple-node-trv fchara/simple-node-trv:latest
 
 after_success:
